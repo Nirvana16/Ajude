@@ -95,8 +95,7 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="147dp"
-                android:layout_weight="0.25">
+                android:layout_height="205dp">
 
                 <ImageButton
                     android:background="@null"
@@ -112,7 +111,27 @@
 
 
             </FrameLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="132dp">
+
+                <ImageButton
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:layout_width="109dp"
+                    android:layout_height="76dp"
+                    android:id="@+id/ibMensagem"
+                    android:src="@drawable/sms"
+                    android:layout_gravity="center"
+                    android:onClick="EnviarSms"/>
+
+
+            </LinearLayout>
+
         </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>
