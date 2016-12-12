@@ -15,11 +15,21 @@ public class MessengerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_messenger);
     }
 
+    // Metodo para efetuar o envio de SMS
+    // Futuraemente irei implementar esse método para que ele busque o texto inserido pelo
+    // usuario.
+    // Vou precisar capturar o numero do contato, passar para String assim e fazer o mesmo
+    // Com o Texto da mensagem.
     public void EnviarSMS(){
-        // Classe SmsManager, API que faz toda a magica acontecer.
+
+        // SmsManager, API que faz toda a magica acontecer.
         // lembrar de ler a documentação mais a fundo
         // https://developer.android.com/reference/android/telephony/SmsManager.html
         SmsManager smsManager = SmsManager.getDefault();
-        smsManager.sendTextMessage("+5522997254145", null, "ATENCAO PRECISO DE AJUDA \n Estou em: LOCALIZACAO", null, null);
+        // O for serve para enviar multiplas mensagens, haverá um parametro na tela de configurações
+        // Onde o usuário poderá definir quantas mensagens ele quer enviar. Por ora coloquei 4.
+        for (int i = 0; i < 4; i++) {
+            smsManager.sendTextMessage("+5522997254145", null, "ATENCAO PRECISO DE AJUDA \n Estou em: LOCALIZACAO", null, null);
+        }
     }
 }
