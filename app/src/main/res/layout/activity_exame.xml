@@ -10,4 +10,70 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.edu.iff.pooa20162.ajude.ExameActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exames"
+        android:id="@+id/tProximosExames"
+        android:textStyle="bold"
+        android:textColor="#1b5000"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="419dp"
+        android:id="@+id/scrollView"
+        android:layout_weight="0.73"
+        android:layout_below="@+id/tProximosExames"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="388dp"
+                android:background="@drawable/borda"
+                android:backgroundTint="#43007e04"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:weightSum="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exameDescricao"
+                    android:id="@+id/tExameDescricao"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:textColor="#000000"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Ecocardiograma - Coração"
+                    android:ems="10"
+                    android:id="@+id/etExameDescricao" />
+
+                <TimePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/timePicker2"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:layout_weight="0.64" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

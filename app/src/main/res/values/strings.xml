@@ -6,4 +6,6 @@
     <string name="mensagem">Mensagem de Alerta</string>
     <string name="contato">Nome do Contato</string>
     <string name="telefone">Telefone do Contato</string>
+    <string name="exames">Proximos Exames e Consultas</string>
+    <string name="exameDescricao">Descricão do Exame</string>
 </resources>

@@ -113,13 +113,13 @@
 
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="132dp">
 
                 <ImageButton
                     android:background="@null"
                     android:scaleType="fitCenter"
-                    android:layout_width="80dp"
+                    android:layout_width="85dp"
                     android:layout_height="76dp"
                     android:id="@+id/ibMensagem"
                     android:src="@drawable/sms"
@@ -129,7 +129,7 @@
                 <ImageButton
                     android:background="@null"
                     android:scaleType="fitCenter"
-                    android:layout_width="80dp"
+                    android:layout_width="85dp"
                     android:layout_height="76dp"
                     android:id="@+id/ibContato"
                     android:layout_gravity="center"
@@ -138,7 +138,7 @@
                 <ImageButton
                     android:background="@null"
                     android:scaleType="fitCenter"
-                    android:layout_width="80dp"
+                    android:layout_width="85dp"
                     android:layout_height="76dp"
                     android:id="@+id/ibExame"
                     android:layout_gravity="center"
@@ -146,7 +146,7 @@
 
                 <ImageButton
                     android:background="@null"
-                    android:layout_width="80dp"
+                    android:layout_width="85dp"
                     android:scaleType="fitCenter"
                     android:layout_height="87dp"
                     android:id="@+id/ibMedicamento"

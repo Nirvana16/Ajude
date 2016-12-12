@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Image Button da Mensagem
         ImageButton ibMsg = (ImageButton) findViewById(R.id.ibMensagem);
+
         ibMsg.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -47,31 +48,31 @@ public class MainActivity extends AppCompatActivity {
 
         // Image Button do Contato
         ImageButton ibContato = (ImageButton) findViewById(R.id.ibContato);
-        ibMsg.setOnClickListener(new View.OnClickListener(){
+        ibContato.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(MainActivity.this, MensagemActivity.class);
+                Intent it = new Intent(MainActivity.this, ContatoActivity.class);
                 startActivity(it);
             }
         });
         // Image Button Exames
         ImageButton ibExame = (ImageButton) findViewById(R.id.ibExame);
-        ibMsg.setOnClickListener(new View.OnClickListener(){
+        ibExame.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(MainActivity.this, MensagemActivity.class);
+                Intent it = new Intent(MainActivity.this, ExameActivity.class);
                 startActivity(it);
             }
         });
         // Image Button do Medicamentos
         ImageButton ibMedicamento = (ImageButton) findViewById(R.id.ibMedicamento);
-        ibMsg.setOnClickListener(new View.OnClickListener(){
+        ibMedicamento.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(MainActivity.this, MensagemActivity.class);
+                Intent it = new Intent(MainActivity.this, MedicamentoActivity.class);
                 startActivity(it);
             }
         });
