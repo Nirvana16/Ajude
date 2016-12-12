@@ -3,16 +3,15 @@ package br.edu.iff.pooa20162.ajude;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
-import android.view.View;
 
-public class MessengerActivity extends AppCompatActivity {
+public class MensagemActivity extends AppCompatActivity {
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_messenger);
+        setContentView(R.layout.activity_mensagem);
     }
 
     // Metodo para efetuar o envio de SMS

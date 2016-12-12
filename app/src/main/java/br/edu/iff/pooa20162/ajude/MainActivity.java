@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         ibAjuda.setOnClickListener(new View.OnClickListener(){
 
 
-            MessengerActivity msg = new MessengerActivity();
+            MensagemActivity msg = new MensagemActivity();
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"Alerta Enviado", Toast.LENGTH_SHORT).show();
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(MainActivity.this, MessengerActivity.class);
+                Intent it = new Intent(MainActivity.this, MensagemActivity.class);
                 startActivity(it);
             }
         });
