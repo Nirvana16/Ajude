@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // BOTÕES ==============================================================
-        // BOTAO AJUDA (IMPLEMENTAR)
+    // BOTÕES ===================================================================================
+        // Botao Principal
         ImageButton ibAjuda = (ImageButton) findViewById(R.id.ibAjuda);
         ibAjuda.setOnClickListener(new View.OnClickListener(){
 
@@ -31,14 +31,42 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"Alerta Enviado", Toast.LENGTH_SHORT).show();
                 msg.EnviarSMS();
-
-
             }
-
         });
 
-        // Image Button da MSG
+        // Image Button da Mensagem
         ImageButton ibMsg = (ImageButton) findViewById(R.id.ibMensagem);
+        ibMsg.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(MainActivity.this, MensagemActivity.class);
+                startActivity(it);
+            }
+        });
+
+        // Image Button do Contato
+        ImageButton ibContato = (ImageButton) findViewById(R.id.ibContato);
+        ibMsg.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(MainActivity.this, MensagemActivity.class);
+                startActivity(it);
+            }
+        });
+        // Image Button Exames
+        ImageButton ibExame = (ImageButton) findViewById(R.id.ibExame);
+        ibMsg.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(MainActivity.this, MensagemActivity.class);
+                startActivity(it);
+            }
+        });
+        // Image Button do Medicamentos
+        ImageButton ibMedicamento = (ImageButton) findViewById(R.id.ibMedicamento);
         ibMsg.setOnClickListener(new View.OnClickListener(){
 
             @Override

@@ -10,4 +10,81 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.edu.iff.pooa20162.ajude.ContatoActivity">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/borda"
+            android:backgroundTint="@color/button_material_light"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="@string/contato"
+                android:id="@+id/tContato1"
+                android:textStyle="bold"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:textSize="25dp"
+                android:textColor="#081800"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Fulano de Tal"
+                android:ems="10"
+                android:id="@+id/etNome1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="@string/telefone"
+                android:id="@+id/Telefone"
+                android:textStyle="bold"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:textSize="20dp"
+                android:textColor="#081800"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/etTelefone1"
+                android:text="22997254145" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="Gravar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gravar"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Limpar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/limpar"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>

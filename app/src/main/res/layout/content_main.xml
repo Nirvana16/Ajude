@@ -41,13 +41,14 @@
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="ENDERECO"
+                    android:text="Rua Dr Siqueria, Prq Tamandaré, Campos dos Goytacazes - RJ "
                     android:id="@+id/tvEndereco"
                     android:background="#e5e5e5"
                     android:clickable="true"
                     android:enabled="false"
                     android:gravity="center_vertical|center_horizontal"
                     android:textColor="#000000"
+                    android:inputType="text"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -72,7 +73,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="coordenadas"
+                    android:text="LAT: -21.762 LNG: -41.3376"
                     android:id="@+id/tCoordenadas"
                     android:background="#e5e5e5"
                     android:clickable="true"
@@ -82,8 +83,7 @@
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
-        </LinearLayout>
-
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -140,7 +140,7 @@
                     android:scaleType="fitCenter"
                     android:layout_width="80dp"
                     android:layout_height="76dp"
-                    android:id="@+id/ibMedico"
+                    android:id="@+id/ibExame"
                     android:layout_gravity="center"
                     android:src="@drawable/medico"/>
 
@@ -149,7 +149,7 @@
                     android:layout_width="80dp"
                     android:scaleType="fitCenter"
                     android:layout_height="87dp"
-                    android:id="@+id/ibRemedios"
+                    android:id="@+id/ibMedicamento"
                     android:src="@drawable/remedio"
                     android:adjustViewBounds="false"
                     android:layout_gravity="center" />
