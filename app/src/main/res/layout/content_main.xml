@@ -47,7 +47,6 @@
                     android:clickable="true"
                     android:enabled="false"
                     android:gravity="center_vertical|center_horizontal"
-                    android:inputType="text"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -114,18 +113,48 @@
 
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="132dp">
 
                 <ImageButton
                     android:background="@null"
                     android:scaleType="fitCenter"
-                    android:layout_width="109dp"
+                    android:layout_width="80dp"
                     android:layout_height="76dp"
                     android:id="@+id/ibMensagem"
                     android:src="@drawable/sms"
                     android:layout_gravity="center"
                     android:onClick="EnviarSms"/>
+
+                <ImageButton
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:layout_width="80dp"
+                    android:layout_height="76dp"
+                    android:id="@+id/ibContato"
+                    android:layout_gravity="center"
+                    android:src="@drawable/contato"/>
+
+                <ImageButton
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:layout_width="80dp"
+                    android:layout_height="76dp"
+                    android:id="@+id/ibMedico"
+                    android:layout_gravity="center"
+                    android:src="@drawable/medico"/>
+
+                <ImageButton
+                    android:background="@null"
+                    android:layout_width="80dp"
+                    android:scaleType="fitCenter"
+                    android:layout_height="87dp"
+                    android:id="@+id/ibRemedios"
+                    android:src="@drawable/remedio"
+                    android:adjustViewBounds="false"
+                    android:layout_gravity="center" />
+
+
 
 
             </LinearLayout>

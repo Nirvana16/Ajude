@@ -14,7 +14,7 @@ public class MensagemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mensagem);
     }
 
-    // Metodo para efetuar o envio de SMS
+    // Metodo para efetuar o envio de sms
     // Futuraemente irei implementar esse método para que ele busque o texto inserido pelo
     // usuario.
     // Vou precisar capturar o numero do contato, passar para String assim e fazer o mesmo
