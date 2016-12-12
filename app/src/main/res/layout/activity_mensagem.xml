@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_messenger"
+    android:id="@+id/activity_mensagem"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -9,5 +9,55 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.edu.iff.pooa20162.ajude.MensagemActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/mensagem"
+            android:id="@+id/tMensagem"
+            android:textStyle="bold"
+            android:layout_weight="0.03"
+            android:textSize="30dp"
+            android:gravity="center"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="0.03" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/etMensagem"
+            android:text=""
+            android:gravity="top|left"
+            android:background="@drawable/borda"
+            android:textSize="20dp"
+            android:textIsSelectable="false"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp" />
+
+        <Button
+            android:layout_width="173dp"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:id="@+id/btSalvar"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
 
 </RelativeLayout>

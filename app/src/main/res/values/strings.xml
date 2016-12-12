@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Ajude</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configurações</string>
+    <string name="paciente">Paciente</string>
+    <string name="save">Salvar</string>
+    <string name="mensagem">Mensagem de Alerta</string>
 </resources>
