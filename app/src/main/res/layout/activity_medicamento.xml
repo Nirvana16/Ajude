@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_medicamento"
     android:layout_width="match_parent"
@@ -9,5 +10,119 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.edu.iff.pooa20162.ajude.MedicamentoActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/medicamentos"
+        android:id="@+id/tMedicamentos"
+        android:textStyle="bold"
+        android:textColor="#1b5000"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tMedicamentos"
+        android:weightSum="1"
+        android:id="@+id/linearLayout">
+
+        <ImageButton
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/botao_novo"
+            android:id="@+id/ibNovoMedicamento" />
+
+        <ImageButton
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/botao_detalhar"
+            android:id="@+id/ibDetalharMedicamento" />
+
+
+
+        <ImageButton
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/botao_excluir"
+            android:id="@+id/ibExcluirMedicamento" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:choiceMode="singleChoice"
+        android:id="@+id/lvMedicamentos" />
+
+    <!--
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="419dp"
+        android:id="@+id/svMedicamentos"
+        android:layout_weight="0.73"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borda"
+                android:backgroundTint="#56007e04"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:weightSum="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exameDescricao"
+                    android:id="@+id/tExameDescricao"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:textColor="#000000"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Ecocardiograma - Coração"
+                    android:ems="10"
+                    android:id="@+id/etExameDescricao" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exameData"
+                    android:id="@+id/tDataExame"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    -->
+
+
 
 </RelativeLayout>

@@ -66,10 +66,10 @@ public class ExameActivity extends AppCompatActivity {
             }
         });
         // Adapter para o Spinner do ano ==================================================
-        ArrayAdapter<String> adapterAno = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, mes);
+        ArrayAdapter<String> adapterAno = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, ano);
         adapterAno.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spAno = (Spinner) findViewById(R.id.spExameAno);
-        spAno.setAdapter(adapterMes);
+        spAno.setAdapter(adapterAno);
         spAno.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
