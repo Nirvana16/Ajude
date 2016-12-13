@@ -38,7 +38,7 @@
             android:layout_width="110dp"
             android:layout_height="48dp"
             app:srcCompat="@drawable/botao_novo"
-            android:id="@+id/ibNovoMedicamento" />
+            android:id="@+id/ibMedicamentoNovo" />
 
         <ImageButton
             android:background="@null"
@@ -65,64 +65,4 @@
         android:layout_below="@+id/linearLayout"
         android:choiceMode="singleChoice"
         android:id="@+id/lvMedicamentos" />
-
-    <!--
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="419dp"
-        android:id="@+id/svMedicamentos"
-        android:layout_weight="0.73"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/linearLayout">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borda"
-                android:backgroundTint="#56007e04"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:weightSum="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/exameDescricao"
-                    android:id="@+id/tExameDescricao"
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:focusableInTouchMode="true"
-                    android:focusable="true"
-                    android:textColor="#000000"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="Ecocardiograma - Coração"
-                    android:ems="10"
-                    android:id="@+id/etExameDescricao" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/exameData"
-                    android:id="@+id/tDataExame"
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:focusableInTouchMode="true"
-                    android:focusable="true"
-                    android:textColor="#000000"/>
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </ScrollView>
-    -->
-
-
-
 </RelativeLayout>

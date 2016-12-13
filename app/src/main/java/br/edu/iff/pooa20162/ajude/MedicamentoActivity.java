@@ -1,10 +1,12 @@
 package br.edu.iff.pooa20162.ajude;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -30,6 +32,16 @@ public class MedicamentoActivity extends AppCompatActivity {
                 //Debug para ver se seleciona certo
                 Toast.makeText(getApplicationContext(), "Medicamento: "+medicamentos.get(position).toString(), Toast.LENGTH_SHORT).show();
 
+            }
+        });
+
+        ImageButton ibMedicamentoNovo = (ImageButton) findViewById(R.id.ibMedicamentoNovo);
+        ibMedicamentoNovo.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(MedicamentoActivity.this, MedicamentoCadastroActivity.class);
+                startActivity(it);
             }
         });
     }

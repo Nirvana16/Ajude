@@ -8,6 +8,15 @@
     <string name="telefone">Telefone do Contato</string>
     <string name="exames">Proximos Exames e Consultas</string>
     <string name="medicamentos">Medicamentos</string>
+
+    <string name="novoMedicamento">Cadastrar Medicamento</string>
+    <string name="medicamentoNome">Nome do Medicamento</string>
+    <string name="medicamentoDescricao">Descrição do Medicamento</string>
+    <string name="medicamentoHoraDeUso">Horario de Uso</string>
+    <string name="medicamentoDataInicio">Data de Inicio</string>
+    <string name="medicamentoDataTermino">Data de Termino</string>
+    <string name="medicamentoPosologia">Posologia</string>
+
     <string name="exameDescricao">Descricão do Exame</string>
     <string name="exameData">Data do Exame</string>
     <string name="exameHora">Horario do Exame</string>

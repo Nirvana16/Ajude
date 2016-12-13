@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_medicamento_cadastro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.edu.iff.pooa20162.ajude.MedicamentoCadastroActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/novoMedicamento"
+        android:id="@+id/tNovoMedicamento"
+        android:textStyle="bold"
+        android:textColor="#1b5000"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:layout_below="@+id/tNovoMedicamento">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/borda"
+            android:backgroundTint="#56007e04"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/linearLayout"
+            android:layout_below="@+id/tNovoMedicamento">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medicamentoNome"
+            android:id="@+id/tmedicamentoNome"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:textColor="#000000"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etMedicamentoNome"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medicamentoDescricao"
+            android:id="@+id/tmedicamentoDescricao"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:textColor="#000000"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etMedicamentoDescricao" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medicamentoHoraDeUso"
+            android:id="@+id/tmedicamentoHora"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:textColor="#000000"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etMedicamentoHora" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medicamentoDataInicio"
+            android:id="@+id/tmedicamentoDataInicio"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:textColor="#000000"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etMedicamentoDataInicio" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medicamentoDataTermino"
+            android:id="@+id/tmedicamentoDataTermino"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:textColor="#000000"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etMedicamentoDataTermino" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medicamentoPosologia"
+            android:id="@+id/tmedicamentoPosologia"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:textColor="#000000"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etMedicamentoPosologia" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+
+        <ImageButton
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/botao_gravar"
+            android:id="@+id/ibGravar"
+            android:layout_weight="0.05" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.83" />
+
+        <ImageButton
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/botao_limpar"
+            android:id="@+id/ibExcluirMedicamento" />
+    </LinearLayout>
+
+
+</RelativeLayout>
