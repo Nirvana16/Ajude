@@ -8,4 +8,5 @@
     <string name="telefone">Telefone do Contato</string>
     <string name="exames">Proximos Exames e Consultas</string>
     <string name="exameDescricao">Descricão do Exame</string>
+    <string name="exameData">Data do Exame</string>
 </resources>
