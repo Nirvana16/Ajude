@@ -21,9 +21,8 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="152dp"
-            android:weightSum="1"
-            android:layout_weight="0.03">
+            android:layout_height="128dp"
+            android:weightSum="1">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -35,21 +34,21 @@
                     android:layout_height="fill_parent"
                     android:id="@+id/iMapa"
                     android:src="@android:drawable/ic_menu_mapmode"
-                    android:background="@color/material_grey_300"
                     android:paddingRight="1dp" />
+
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="Rua Dr Siqueria, Prq Tamandaré, Campos dos Goytacazes - RJ "
                     android:id="@+id/tvEndereco"
-                    android:background="#e5e5e5"
+                    android:background="#0f008f05"
                     android:clickable="true"
                     android:enabled="false"
                     android:gravity="center_vertical|center_horizontal"
                     android:textColor="#000000"
                     android:inputType="text"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
@@ -66,7 +65,6 @@
                     android:layout_height="fill_parent"
                     android:id="@+id/iMapa2"
                     android:src="@android:drawable/ic_menu_mylocation"
-                    android:background="@color/material_grey_300"
                     android:paddingRight="1dp" />
                 <!-- coordenadas -->
                 <TextView
@@ -75,7 +73,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="LAT: -21.762 LNG: -41.3376"
                     android:id="@+id/tCoordenadas"
-                    android:background="#e5e5e5"
+                    android:background="#0f008f05"
                     android:clickable="true"
                     android:enabled="false"
                     android:gravity="center_vertical|center_horizontal"
@@ -94,7 +92,7 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="205dp">
+                android:layout_height="214dp">
 
                 <ImageButton
                     android:background="@null"

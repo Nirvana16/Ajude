@@ -20,4 +20,6 @@
     <string name="exameDescricao">Descricão do Exame</string>
     <string name="exameData">Data do Exame</string>
     <string name="exameHora">Horario do Exame</string>
+
+    <string name="usuario">Dados do Usuario</string>
 </resources>
