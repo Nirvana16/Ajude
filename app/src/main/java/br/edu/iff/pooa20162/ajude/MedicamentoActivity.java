@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import static br.edu.iff.pooa20162.ajude.R.id.bMedicamentoNovo;
+
 
 public class MedicamentoActivity extends AppCompatActivity {
 
@@ -35,8 +38,9 @@ public class MedicamentoActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton ibMedicamentoNovo = (ImageButton) findViewById(R.id.ibMedicamentoNovo);
-        ibMedicamentoNovo.setOnClickListener(new View.OnClickListener(){
+
+        Button bNovo = (Button) findViewById(bMedicamentoNovo);
+        bNovo.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {

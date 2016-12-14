@@ -155,26 +155,33 @@
         android:layout_alignParentStart="true">
 
 
-        <ImageButton
-            android:background="@null"
-            android:scaleType="fitCenter"
+        <Button
+            android:layout_weight="0.05"
+            android:text="Gravar"
             android:layout_width="110dp"
             android:layout_height="48dp"
-            app:srcCompat="@drawable/botao_gravar"
-            android:id="@+id/ibGravar"
-            android:layout_weight="0.05" />
+            android:id="@+id/bgravar"
+            android:background="@drawable/botao"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.83" />
+            android:layout_weight="0.89" />
 
-        <ImageButton
-            android:background="@null"
-            android:scaleType="fitCenter"
+        <Button
+            android:text="Limpar"
             android:layout_width="110dp"
             android:layout_height="48dp"
-            app:srcCompat="@drawable/botao_limpar"
-            android:id="@+id/ibExcluirMedicamento" />
+            android:id="@+id/blimpar"
+            android:background="@drawable/botao"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+
     </LinearLayout>
 
 

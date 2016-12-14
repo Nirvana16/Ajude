@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+// Métodos da Action Bar ========================================================================
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -86,18 +87,40 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
+    // Lista de opções da action bar personalizada
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch(item.getItemId()) {
+            case R.id.action_configuracoes:
+                // ALTERAR PARA CONFIGURAÇÕES
+                Intent intent = new Intent(this,MedicamentoActivity.class);
+                this.startActivity(intent);
+                break;
+            case R.id.action_paciente:
+                Intent intent2 = new Intent(this,PacienteActivity.class);
+                this.startActivity(intent2);
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
+        return true;
     }
+
+
+//    // Menu original, comentado por ora.... Excluir no futuro
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 }

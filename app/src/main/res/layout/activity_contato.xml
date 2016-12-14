@@ -72,17 +72,28 @@
 
             <Button
                 android:text="Gravar"
+                android:layout_width="156dp"
+                android:layout_height="59dp"
+                android:id="@+id/gravar"
+                android:background="@drawable/botao"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
+
+            <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/gravar"
                 android:layout_weight="1" />
 
             <Button
                 android:text="Limpar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="156dp"
+                android:layout_height="59dp"
                 android:id="@+id/limpar"
-                android:layout_weight="1" />
+                android:background="@drawable/botao"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

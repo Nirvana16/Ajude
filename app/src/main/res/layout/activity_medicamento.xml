@@ -32,31 +32,35 @@
         android:weightSum="1"
         android:id="@+id/linearLayout">
 
-        <ImageButton
-            android:background="@null"
-            android:scaleType="fitCenter"
+        <Button
+            android:text="Novo +"
             android:layout_width="110dp"
             android:layout_height="48dp"
-            app:srcCompat="@drawable/botao_novo"
-            android:id="@+id/ibMedicamentoNovo" />
+            android:id="@+id/bMedicamentoNovo"
+            android:background="@drawable/botao"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
 
-        <ImageButton
-            android:background="@null"
-            android:scaleType="fitCenter"
+        <Button
+            android:text="Detalhar"
             android:layout_width="110dp"
             android:layout_height="48dp"
-            app:srcCompat="@drawable/botao_detalhar"
-            android:id="@+id/ibDetalharMedicamento" />
+            android:id="@+id/bMedicamentoDetalhar"
+            android:background="@drawable/botao"
+            android:textSize="17dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
 
-
-
-        <ImageButton
-            android:background="@null"
-            android:scaleType="fitCenter"
+        <Button
+            android:text="Excluir"
             android:layout_width="110dp"
             android:layout_height="48dp"
-            app:srcCompat="@drawable/botao_excluir"
-            android:id="@+id/ibExcluirMedicamento" />
+            android:id="@+id/bMedicamentoExcluir"
+            android:background="@drawable/botao"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <ListView

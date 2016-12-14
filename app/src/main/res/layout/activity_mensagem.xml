@@ -53,10 +53,14 @@
 
         <Button
             android:layout_width="173dp"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:text="@string/save"
             android:id="@+id/btSalvar"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/botao"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
