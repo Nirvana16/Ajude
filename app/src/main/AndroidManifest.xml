@@ -25,7 +25,8 @@
         <activity android:name=".MedicamentoActivity" />
         <activity android:name=".ExameActivity" />
         <activity android:name=".PacienteActivity" />
-        <activity android:name=".MedicamentoCadastroActivity"></activity>
+        <activity android:name=".MedicamentoCadastroActivity" />
+        <activity android:name=".OpcoesActivity"></activity>
     </application>
 
 </manifest>

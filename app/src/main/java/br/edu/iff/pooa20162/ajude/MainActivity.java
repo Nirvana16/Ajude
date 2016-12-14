@@ -92,9 +92,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()) {
-            case R.id.action_configuracoes:
-                // ALTERAR PARA CONFIGURAÇÕES
-                Intent intent = new Intent(this,MedicamentoActivity.class);
+            case R.id.action_opcoes:
+                Intent intent = new Intent(this,OpcoesActivity.class);
                 this.startActivity(intent);
                 break;
             case R.id.action_paciente:
