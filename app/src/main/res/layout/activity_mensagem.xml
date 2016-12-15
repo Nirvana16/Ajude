@@ -40,7 +40,7 @@
             android:layout_height="268dp"
             android:inputType="textMultiLine"
             android:ems="10"
-            android:id="@+id/etMensagem"
+            android:id="@+id/etConteudo"
             android:text=""
             android:gravity="top|left"
             android:background="@drawable/borda"

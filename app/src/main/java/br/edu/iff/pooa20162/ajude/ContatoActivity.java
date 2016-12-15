@@ -6,8 +6,8 @@ import android.os.Bundle;
 public class ContatoActivity extends AppCompatActivity {
 
  // Variaveis locais ====================================================================
-    private String nome = "Fulando de tal", telefone = "+5522997814310";
-
+//    private String nome = "Fulando de tal", telefone = "+5522997814310";
+    private String nome, telefone;
 
  // Getters and Setters ================================================================
     public String getNome() {
@@ -26,11 +26,18 @@ public class ContatoActivity extends AppCompatActivity {
         this.telefone = telefone;
     }
 
+// Metodos construtores =================================================================
+    /* Fiz atribuição estatica por ora. futuramente isso sera coletado do usuario e
+        em seguida do banco de dados.
+    */
+    public ContatoActivity(){
+        nome = "Fulando de tal";
+        telefone = "+5522997814310";
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contato);
-
     }
 }
