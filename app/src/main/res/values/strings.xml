@@ -13,6 +13,7 @@
     <string name="medicamentoNome">Nome do Medicamento</string>
     <string name="medicamentoDescricao">Descrição do Medicamento</string>
     <string name="medicamentoHoraDeUso">Horario de Uso</string>
+    <string name="medicamentoDosagem">Dosagem</string>
     <string name="medicamentoDataInicio">Data de Inicio</string>
     <string name="medicamentoDataTermino">Data de Termino</string>
     <string name="medicamentoPosologia">Posologia</string>

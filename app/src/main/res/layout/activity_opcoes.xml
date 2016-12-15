@@ -14,12 +14,47 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:weightSum="1">
 
         <Switch
             android:text="Tambem executar Alarme neste dispositivo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/switch1" />
+            android:id="@+id/switch1"
+            android:layout_weight="0.05" />
+
+        <Switch
+            android:text="Exibir notificação na hora do medicamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch1"
+            android:layout_weight="0.05" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Quantidade de mensagens de Alertas"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:id="@+id/tvQtdMensagensAlerta"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:text="4"
+                android:textAlignment="center"/>
+
+
+        </LinearLayout>
+
+
     </LinearLayout>
 </RelativeLayout>
