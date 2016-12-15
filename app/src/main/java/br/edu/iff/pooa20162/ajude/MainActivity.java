@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -78,6 +79,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+        Log.v("Hora do Show","OnStart");
+    }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        Log.v("Boora","onResume");
+    }
+
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+        Log.v("Segura!","onPause");
+    }
+
+    @Override
+    protected void onStop()
+    {
+        super.onStop();
+        Log.v("Birll","onStop");
+    }
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        Log.v("Ta saindo da jaula","onDestroy");
     }
 
 // Métodos da Action Bar ========================================================================
