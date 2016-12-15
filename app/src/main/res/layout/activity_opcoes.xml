@@ -31,6 +31,13 @@
             android:id="@+id/switch1"
             android:layout_weight="0.05" />
 
+        <Switch
+            android:text="Excluir exames já realizados após 24 horas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch1"
+            android:layout_weight="0.05" />
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"

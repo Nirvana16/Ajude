@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"Alerta Enviado", Toast.LENGTH_SHORT).show();
                 msg.EnviarSMS();
+
             }
         });
 
