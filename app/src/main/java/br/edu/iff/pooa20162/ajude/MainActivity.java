@@ -14,6 +14,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,18 +22,28 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
     // BOTÕES ===================================================================================
         // Botao Principal
         ImageButton ibAjuda = (ImageButton) findViewById(R.id.ibAjuda);
         ibAjuda.setOnClickListener(new View.OnClickListener(){
 
-
+            // Criacao do objeto Msg para receber o valor do texto digitado pelo usuário
             MensagemActivity msg = new MensagemActivity();
+
+            // Variavel de apoio valor recebendo o conteudo do editText da Activity anterior
+            String valor = getIntent().getStringExtra("Msgconteudo");
+
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Alerta Enviado", Toast.LENGTH_SHORT).show();
+                //Faz com que "conteudo" da classe Mensagem assuma o valor digitado pelo usuario
+                //Isso será desnecessário assim que salvar os dados no BD
+                msg.setConteudo(valor);
                 msg.EnviarSMS();
+                Toast.makeText(getApplicationContext(),"Alerta Enviado", Toast.LENGTH_SHORT).show();
 
+                Log.v("Mensagem 2 = ",msg.getConteudo());
             }
         });
 
@@ -85,34 +96,34 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart()
     {
         super.onStart();
-        Log.v("Hora do Show","OnStart");
+        Log.v("Main","OnStart");
     }
 
     @Override
     protected void onResume()
     {
         super.onResume();
-        Log.v("Boora","onResume");
+        Log.v("Main","onResume");
     }
 
     @Override
     protected void onPause()
     {
         super.onPause();
-        Log.v("Segura!","onPause");
+        Log.v("Main!","onPause");
     }
 
     @Override
     protected void onStop()
     {
         super.onStop();
-        Log.v("Birll","onStop");
+        Log.v("Main","onStop");
     }
     @Override
     protected void onDestroy()
     {
         super.onDestroy();
-        Log.v("Ta saindo da jaula","onDestroy");
+        Log.v("Main","onDestroy");
     }
 
 // Métodos da Action Bar ========================================================================
