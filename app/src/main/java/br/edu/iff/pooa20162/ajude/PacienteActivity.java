@@ -17,33 +17,33 @@ public class PacienteActivity extends AppCompatActivity {
     protected void onStart()
     {
         super.onStart();
-        Log.v("Hora do Show","OnStart");
+        Log.v("Paciente","OnStart");
     }
 
     @Override
     protected void onResume()
     {
         super.onResume();
-        Log.v("Boora","onResume");
+        Log.v("Paciente","onResume");
     }
 
     @Override
     protected void onPause()
     {
         super.onPause();
-        Log.v("Segura!","onPause");
+        Log.v("Paciente!","onPause");
     }
 
     @Override
     protected void onStop()
     {
         super.onStop();
-        Log.v("Birll","onStop");
+        Log.v("Paciente","onStop");
     }
     @Override
     protected void onDestroy()
     {
         super.onDestroy();
-        Log.v("Ta saindo da jaula","onDestroy");
+        Log.v("Paciente","onDestroy");
     }
 }

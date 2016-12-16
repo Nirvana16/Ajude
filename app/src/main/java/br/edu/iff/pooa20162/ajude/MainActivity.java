@@ -1,5 +1,6 @@
 package br.edu.iff.pooa20162.ajude;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import br.edu.iff.pooa20162.ajude.services.SMSReceiver;
 
 public class MainActivity extends AppCompatActivity {
 
