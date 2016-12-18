@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -34,14 +36,14 @@ public class MedicamentoActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 //Debug para ver se seleciona certo
-                Toast.makeText(getApplicationContext(), "Medicamento: "+medicamentos.get(position).toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Medicamento: " + medicamentos.get(position).toString(), Toast.LENGTH_SHORT).show();
 
             }
         });
 
 
         Button bNovo = (Button) findViewById(bMedicamentoNovo);
-        bNovo.setOnClickListener(new View.OnClickListener(){
+        bNovo.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -50,38 +52,35 @@ public class MedicamentoActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
-    protected void onStart()
-    {
+    protected void onStart() {
         super.onStart();
-        Log.v("Hora do Show","OnStart");
+        Log.v("Hora do Show", "OnStart");
     }
 
     @Override
-    protected void onResume()
-    {
+    protected void onResume() {
         super.onResume();
-        Log.v("Boora","onResume");
+        Log.v("Boora", "onResume");
     }
 
     @Override
-    protected void onPause()
-    {
+    protected void onPause() {
         super.onPause();
-        Log.v("Segura!","onPause");
+        Log.v("Segura!", "onPause");
     }
 
     @Override
-    protected void onStop()
-    {
+    protected void onStop() {
         super.onStop();
-        Log.v("Birll","onStop");
+        Log.v("Birll", "onStop");
     }
+
     @Override
-    protected void onDestroy()
-    {
+    protected void onDestroy() {
         super.onDestroy();
-        Log.v("Ta saindo da jaula","onDestroy");
+        Log.v("Ta saindo da jaula", "onDestroy");
     }
 
     // Futuramente vou implementar para que ocorra o preenchimento dinamico em tempo de execução.
@@ -100,4 +99,30 @@ public class MedicamentoActivity extends AppCompatActivity {
         return dados;
     }
 
+    // Métodos da Action Bar ========================================================================
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_medicamento, menu);
+        return true;
+    }
+
+
+    // Lista de opções da action bar personalizada
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_add:
+                Intent intent = new Intent(this, MedicamentoCadastroActivity.class);
+                this.startActivity(intent);
+                break;
+//            case R.id.action_paciente:
+//                Intent intent2 = new Intent(this,PacienteActivity.class);
+//                this.startActivity(intent2);
+//                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
+    }
 }
