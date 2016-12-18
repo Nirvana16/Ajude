@@ -36,6 +36,7 @@
             android:layout_weight="0.03" />
 
         <EditText
+            android:hint="Informe aqui a sua mensagem"
             android:layout_width="match_parent"
             android:layout_height="268dp"
             android:inputType="textMultiLine"

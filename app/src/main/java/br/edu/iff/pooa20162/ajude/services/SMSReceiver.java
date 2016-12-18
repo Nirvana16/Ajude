@@ -24,17 +24,20 @@ public class SMSReceiver extends BroadcastReceiver {
         if (intent.getAction().equals(Telephony.Sms.Intents.SMS_RECEIVED_ACTION)) {
             SmsMessage[] smsMessages = Telephony.Sms.Intents.getMessagesFromIntent(intent);
             for (SmsMessage message : smsMessages) {
-                // Do whatever you want to do with SMS.
+                // Acoes devem ser postas a seguir......
                 String telefone = message.getDisplayOriginatingAddress();
-
                 String quemEnviou = telefone;
                 String messagem = message.getDisplayMessageBody();
 
+                // Apenas para debug
                 Log.v("TELEFONE = ", quemEnviou);
                 Log.v("MENSAGEM = ", messagem);
 
                 //Toast toast = Toast.makeText(context, "Quem enviou : " + quemEnviou + ", Msg : " + messagem, Toast.LENGTH_LONG);
                 //toast.show();
+                //Futuramente vou trocar essa palavra chave
+                //Farei uma condicional para verificar se o numero de quem enviou é o numero do Paciente
+                //Havendo a combinação Numero Paciente + Codigo Chave o alarme será ativado no aparelho alvo.
                 if (messagem.equalsIgnoreCase("cebola!")) {
                     mp = MediaPlayer.create(context, R.raw.alarme);
                     mp.start();

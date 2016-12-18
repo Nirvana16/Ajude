@@ -53,6 +53,7 @@
             android:focusable="true"
             android:textColor="#000000"/>
         <EditText
+            android:hint="Nome do Medicamento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
@@ -69,6 +70,7 @@
             android:focusable="true"
             android:textColor="#000000"/>
         <EditText
+            android:hint="Descrição"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
@@ -86,6 +88,7 @@
             android:textColor="#000000"/>
 
         <EditText
+            android:hint="Posologia / Dosagem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -108,6 +111,7 @@
             android:layout_height="wrap_content"
             android:inputType="time"
             android:ems="10"
+            android:hint="Horario de uso"
             android:id="@+id/etMedicamentoHora" />
         <TextView
             android:layout_width="wrap_content"
@@ -120,6 +124,7 @@
             android:focusable="true"
             android:textColor="#000000"/>
         <EditText
+            android:hint="Data de Inicio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="date"
@@ -137,6 +142,7 @@
             android:focusable="true"
             android:textColor="#000000"/>
         <EditText
+            android:hint="Data de termino do tratamento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="date"
