@@ -7,7 +7,6 @@ import android.util.Log;
 public class ContatoActivity extends AppCompatActivity {
 
  // Variaveis locais ====================================================================
-//    private String nome = "Fulando de tal", telefone = "+5522997814310";
     private String nome, telefone;
 
  // Getters and Setters ================================================================

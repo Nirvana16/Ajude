@@ -10,6 +10,9 @@ import android.util.Log;
 import android.widget.Toast;
 
 import br.edu.iff.pooa20162.ajude.MainActivity;
+import br.edu.iff.pooa20162.ajude.MensagemActivity;
+import br.edu.iff.pooa20162.ajude.PacienteActivity;
+import br.edu.iff.pooa20162.ajude.PacienteAjudaActivity;
 import br.edu.iff.pooa20162.ajude.R;
 
 
@@ -38,9 +41,13 @@ public class SMSReceiver extends BroadcastReceiver {
                 //Futuramente vou trocar essa palavra chave
                 //Farei uma condicional para verificar se o numero de quem enviou é o numero do Paciente
                 //Havendo a combinação Numero Paciente + Codigo Chave o alarme será ativado no aparelho alvo.
-                if (messagem.equalsIgnoreCase("cebola!")) {
+                if (messagem.equalsIgnoreCase("123")) {
                     mp = MediaPlayer.create(context, R.raw.alarme);
                     mp.start();
+
+                    Intent open = new Intent(context, PacienteAjudaActivity.class);
+                    open.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(open);
                 }
             }
         }
