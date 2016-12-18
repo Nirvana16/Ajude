@@ -1,5 +1,5 @@
  
-O que foi realizado até o momento:
+**O que foi realizado até o momento:
 
 - Criado Activities.
 - Implementado Layout.
@@ -12,7 +12,8 @@ O que foi realizado até o momento:
 - Iniciado a realização da documentação do App
 - Realizado o Diagrama de Classes
 - Realizado xml dos botões com efeito de animação ao clique.
-O que falta ser realizado:
+
+**O que falta ser realizado:
 
 - Polir as Activities para melhor efeito visual
 - Implementar O CRUD com SQLITE e, talvez, aplicar um ORM.
