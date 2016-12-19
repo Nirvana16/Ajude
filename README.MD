@@ -19,7 +19,7 @@
 - Implementar O CRUD com SQLITE e, talvez, aplicar um ORM.
 - Finalizar a documentação.
 - Realizar o restante da parte de programação do projeto.
-- Organizar as classes do projeto
+- Organizar as classes do projeto e seus relacionamentos
 - Implementar o serviço de background responsavel por receber o alerta
 - Implemenntar o serviço de geolocalização
 IFF - Campus Centro Bacharelado de Sistemas de Informações Projeto Orientação a Objetos Aplicada
