@@ -56,31 +56,31 @@ public class MedicamentoActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.v("Hora do Show", "OnStart");
+        Log.v("MedicamentoAct", "OnStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.v("Boora", "onResume");
+        Log.v("MedicamentoAct", "onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.v("Segura!", "onPause");
+        Log.v("MedicamentoAct!", "onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.v("Birll", "onStop");
+        Log.v("MedicamentoAct", "onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.v("Ta saindo da jaula", "onDestroy");
+        Log.v("MedicamentoAct", "onDestroy");
     }
 
     // Futuramente vou implementar para que ocorra o preenchimento dinamico em tempo de execução.

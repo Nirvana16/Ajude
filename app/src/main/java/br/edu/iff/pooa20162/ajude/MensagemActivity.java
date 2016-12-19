@@ -14,7 +14,7 @@ public class MensagemActivity extends AppCompatActivity {
 
 // Variaveis locais ====================================================================
 
-    private String conteudo = "\nPRECISO DE AJUDA \n Estou em: LOCALIZACAO";;
+    private String conteudo = "\nPRECISO DE AJUDA \n Estou em: LOCALIZACAO";
 
     Button bSalvar;
     EditText etConteudo;
