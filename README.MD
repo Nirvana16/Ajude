@@ -1,20 +1,11 @@
 **ATENÇÃO:
 
-<<<<<<< HEAD
-*BUGS CONHECIDOS: ->>> A versão disponibilizada no branch Master NÃO esta pedindo ao usuario que conceda 
+*BUGS CONHECIDOS:  A versão disponibilizada no branch Master NÃO esta pedindo ao usuario que conceda 
 a permissão em tempo de execução, ou seja, assim que o App é instalado ele deveria abrir uma notificação 
 pedindo para que o usuário conceda a permissão para acesso ao SMS e Serviço de Broadcast. 
 ISSO AINDA SÉRA IMPLEMENTADO, entretanto basta ir nas informações do Aplicativo (Configurações / Aplicações / AJUDE) 
 E informar as permissões na proxima tela.
 
-
-
-=======
- *BUGS CONHECIDOS:
-  ->>> A versão disponibilizada no branch Master NÃO esta pedindo ao usuario que conceda a permissão em tempo de execução, ou seja, assim que o App é instalado ele deveria abrir uma notificação pedindo para que o usuário conceda a permissão para acesso ao SMS e Serviço de Broadcast. ISSO AINDA SÉRA IMPLEMENTADO, entretanto basta ir nas informações do Aplicativo (Configurações / Aplicações / AJUDE) E informar as permissões na proxima tela.
- 
- 
->>>>>>> 82cbb5e5c373e29bdc6ca175a25139436270312c
 **O que foi realizado até o momento:
 
 - Criado Activities.
