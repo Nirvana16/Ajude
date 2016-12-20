@@ -2,15 +2,20 @@ package br.edu.iff.pooa20162.ajude.model;
 
 import android.telephony.SmsManager;
 
+import com.orm.SugarRecord;
+
 /**
- * Created by Nirvana161 on 19/12/16.
+ * Created by Nirvana16 on 19/12/16.
  */
 
-public class Mensagem {
+public class Mensagem extends SugarRecord {
+
+    // Atributo para o Banco de dados
+    private Long id;
 
     // Provisório até implementar a classe Local.
     //private String conteudo = "\nPRECISO DE AJUDA \n Estou em: LOCALIZACAO";
-    private String conteudo = null;
+    private String conteudo;
 
     public String getConteudo() {
         return conteudo;
@@ -21,7 +26,10 @@ public class Mensagem {
     }
 
 
-    public Mensagem(){
+    public Mensagem(){}
+
+    public Mensagem(String conteudo){
+        this.conteudo = conteudo;
     }
 
 

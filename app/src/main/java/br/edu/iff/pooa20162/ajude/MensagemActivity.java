@@ -16,24 +16,12 @@ import br.edu.iff.pooa20162.ajude.model.Mensagem;
 public class MensagemActivity extends AppCompatActivity {
 
 // Atributos de referencia ====================================================================
-
-
+    Mensagem msg;
 
     //private String conteudo = "\nPRECISO DE AJUDA \n Estou em: LOCALIZACAO";
     Button bSalvar;
     EditText etConteudo;
 
-// Atributos de referencia para o relacionamento entre classes =========================
-
-// Getters and Setters ================================================================
-//
-//    public String getConteudo() {
-//        return conteudo;
-//    }
-//
-//    public void setConteudo(String conteudo) {
-//        this.conteudo = conteudo;
-//    }
 
 // Metodos construtores / Ciclo de vida =================================================================
     @Override
@@ -41,8 +29,6 @@ public class MensagemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mensagem);
 
-        //Salvar conteudo da mensagem dinamicamente
-        //Futuramente isso será salvo no banco de dados
         bSalvar = (Button) findViewById(R.id.btSalvar);
         etConteudo = (EditText) findViewById(R.id.etConteudo);
 
@@ -50,22 +36,32 @@ public class MensagemActivity extends AppCompatActivity {
         bSalvar.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
 
+                msg = new Mensagem(etConteudo.getText().toString());
+                msg.save();
+//                msg = msg.findById(Mensagem.class,1);
+//                msg = msg.Parse
+//                Log.v("Msg BD",msg);
+
+
+
                 //Fazendo a chamada da tela que ira receber o conteudo do editText
-                Intent itMain = new Intent(MensagemActivity.this, MainActivity.class);
+                    //Intent itMain = new Intent(MensagemActivity.this, MainActivity.class);
 
                 //Metodo putExtra quem envia o contudo para a outra Activity
                 //as informações sao enviadas na forma de "chave e valor" neste caso a minha
                 // chave é a string Msgconteudo e o Valor é o texto contido no etConteudo
-                String conteudo = etConteudo.getText().toString();
-//                itMain.putExtra("Msgconteudo",mensagem.getConteudo());
-                itMain.putExtra("Msgconteudo",conteudo);
-                startActivity(itMain);
-                Mensagem mensagem = new Mensagem();
-                mensagem.setConteudo(conteudo);
-                //Apenas para debug;
-                Log.v("EditText", etConteudo.getText().toString());
-                Log.v("VALOR DE CONTEUDO",conteudo);
-                Log.v("ConteudoClasse",mensagem.getConteudo());
+                  // String conteudo = etConteudo.getText().toString();
+
+//                itMain.putExtra("Msgconteudo",conteudo);
+//                startActivity(itMain);
+//                Mensagem mensagem = new Mensagem();
+//                mensagem.setConteudo(conteudo);
+//                //Apenas para debug;
+               // Log.v("EditText", etConteudo.getText().toString());
+                //Log.v("VALOR DE CONTEUDO",conteudo);
+                //Log.v("ConteudoClasse",mensagem.getConteudo());
+
+
 
                 Toast.makeText(getApplicationContext(),"Mensagem Salva", Toast.LENGTH_SHORT).show();
             }
