@@ -12,11 +12,10 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import br.edu.iff.pooa20162.ajude.model.Mensagem;
 import br.edu.iff.pooa20162.ajude.services.SMSReceiver;
 
 public class MainActivity extends AppCompatActivity {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,15 +24,13 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-
     // BOTÕES ===================================================================================
         // Botao Principal
         ImageButton ibAjuda = (ImageButton) findViewById(R.id.ibAjuda);
         ibAjuda.setOnClickListener(new View.OnClickListener(){
 
             // Criacao do objeto Msg para receber o valor do texto digitado pelo usuário
-            MensagemActivity msg = new MensagemActivity();
+            Mensagem msg = new Mensagem();
 
             // Variavel de apoio valor recebendo o conteudo do editText da Activity anterior
             String valor = getIntent().getStringExtra("Msgconteudo");
@@ -42,8 +39,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Faz com que "conteudo" da classe Mensagem assuma o valor digitado pelo usuario
                 //Isso será desnecessário assim que salvar os dados no BD
+
+                Log.v("Mensagem Valor = ",valor);
+//                Log.v("Mensagem GET = ",msg.getConteudo());
+
+
+                msg.enviarSMS(valor,4,"Av antonio luiz da silverira - centro - campos dos goytacazes");
+
                 msg.setConteudo(valor);
-                msg.EnviarSMS();
+                //msg.enviarSMS();
                 Toast.makeText(getApplicationContext(),"Alerta Enviado", Toast.LENGTH_SHORT).show();
 
                 Log.v("Mensagem 2 = ",msg.getConteudo());

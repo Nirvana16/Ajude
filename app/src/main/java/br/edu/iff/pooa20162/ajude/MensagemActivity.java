@@ -10,26 +10,30 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import br.edu.iff.pooa20162.ajude.model.Contato;
+import br.edu.iff.pooa20162.ajude.model.Mensagem;
+
 public class MensagemActivity extends AppCompatActivity {
 
-// Variaveis locais ====================================================================
+// Atributos de referencia ====================================================================
 
-    private String conteudo = "\nPRECISO DE AJUDA \n Estou em: LOCALIZACAO";
 
+
+    //private String conteudo = "\nPRECISO DE AJUDA \n Estou em: LOCALIZACAO";
     Button bSalvar;
     EditText etConteudo;
 
 // Atributos de referencia para o relacionamento entre classes =========================
 
 // Getters and Setters ================================================================
-
-    public String getConteudo() {
-        return conteudo;
-    }
-
-    public void setConteudo(String conteudo) {
-        this.conteudo = conteudo;
-    }
+//
+//    public String getConteudo() {
+//        return conteudo;
+//    }
+//
+//    public void setConteudo(String conteudo) {
+//        this.conteudo = conteudo;
+//    }
 
 // Metodos construtores / Ciclo de vida =================================================================
     @Override
@@ -52,13 +56,16 @@ public class MensagemActivity extends AppCompatActivity {
                 //Metodo putExtra quem envia o contudo para a outra Activity
                 //as informações sao enviadas na forma de "chave e valor" neste caso a minha
                 // chave é a string Msgconteudo e o Valor é o texto contido no etConteudo
-                itMain.putExtra("Msgconteudo",etConteudo.getText().toString());
+                String conteudo = etConteudo.getText().toString();
+//                itMain.putExtra("Msgconteudo",mensagem.getConteudo());
+                itMain.putExtra("Msgconteudo",conteudo);
                 startActivity(itMain);
-
-                conteudo = etConteudo.getText().toString();
+                Mensagem mensagem = new Mensagem();
+                mensagem.setConteudo(conteudo);
                 //Apenas para debug;
                 Log.v("EditText", etConteudo.getText().toString());
                 Log.v("VALOR DE CONTEUDO",conteudo);
+                Log.v("ConteudoClasse",mensagem.getConteudo());
 
                 Toast.makeText(getApplicationContext(),"Mensagem Salva", Toast.LENGTH_SHORT).show();
             }
@@ -106,20 +113,20 @@ public class MensagemActivity extends AppCompatActivity {
     // usuario.
     // Vou precisar capturar o numero do contato, passar para String assim e fazer o mesmo
     // Com o Texto da mensagem.
-    public void EnviarSMS(){
-
-        ContatoActivity objContato = new ContatoActivity();
-        /*
-           SmsManager, API que faz toda a magica acontecer.
-           lembrar de ler a documentação mais a fundo
-           https://developer.android.com/reference/android/telephony/SmsManager.html
-         */
-        SmsManager smsManager = SmsManager.getDefault();
-        // O for serve para enviar multiplas mensagens, haverá um parametro na tela de configurações
-        // Onde o usuário poderá definir quantas mensagens ele quer enviar. Por ora coloquei 4.
-
-        for (int i = 0; i < 4; i++) {
-            smsManager.sendTextMessage(objContato.getTelefone(), null, "ATENCAO! "+objContato.getNome()+"\n"+conteudo, null, null);
-        }
-    }
+//    public void EnviarSMS(){
+//
+//        Contato objContato = new Contato();
+//        /*
+//           SmsManager, API que faz toda a magica acontecer.
+//           lembrar de ler a documentação mais a fundo
+//           https://developer.android.com/reference/android/telephony/SmsManager.html
+//         */
+//        SmsManager smsManager = SmsManager.getDefault();
+//        // O for serve para enviar multiplas mensagens, haverá um parametro na tela de configurações
+//        // Onde o usuário poderá definir quantas mensagens ele quer enviar. Por ora coloquei 4.
+//
+//        for (int i = 0; i < 4; i++) {
+//            smsManager.sendTextMessage(objContato.getTelefone(), null, "ATENCAO! "+objContato.getNome()+"\n"+conteudo, null, null);
+//        }
+//    }
 }
