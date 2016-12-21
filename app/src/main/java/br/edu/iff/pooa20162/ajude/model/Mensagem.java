@@ -1,8 +1,14 @@
 package br.edu.iff.pooa20162.ajude.model;
 
+import android.content.Intent;
 import android.telephony.SmsManager;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.orm.SugarRecord;
+
+import br.edu.iff.pooa20162.ajude.MainActivity;
+import br.edu.iff.pooa20162.ajude.MensagemActivity;
 
 /**
  * Created by Nirvana16 on 19/12/16.
@@ -16,6 +22,7 @@ public class Mensagem extends SugarRecord {
     // Provisório até implementar a classe Local.
     //private String conteudo = "\nPRECISO DE AJUDA \n Estou em: LOCALIZACAO";
     private String conteudo;
+
 
     public String getConteudo() {
         return conteudo;
@@ -33,8 +40,7 @@ public class Mensagem extends SugarRecord {
     }
 
 
-
-//    public void enviarSMS() {
+//    public void enviarSMS(String conteudo, int Qtdrepeticoes, String localizacao) {
 //
 //        Contato objContato = new Contato();
 //        /*
@@ -43,15 +49,20 @@ public class Mensagem extends SugarRecord {
 //           https://developer.android.com/reference/android/telephony/SmsManager.html
 //         */
 //        SmsManager smsManager = SmsManager.getDefault();
-//        // O for serve para enviar multiplas mensagens, haverá um parametro na tela de configurações
-//        // Onde o usuário poderá definir quantas mensagens ele quer enviar. Por ora coloquei 4.
 //
-//        for (int i = 0; i < 4; i++) {
-//            smsManager.sendTextMessage(objContato.getTelefone(), null, "ATENCAO!! !" + objContato.getNome() + "\n" + conteudo, null, null);
+//        if (conteudo.equalsIgnoreCase(null)){
+//            conteudo = "\nPRECISO DE AJUDA";
+//        }
+//        for (int i = 0; i < Qtdrepeticoes; i++) {
+//            smsManager.sendTextMessage(objContato.getTelefone(), null, "ATENCAO!! !"+objContato.getNome()+
+//                    "\n"+conteudo+"\nEstou em:"+localizacao, null, null);
 //        }
 //    }
 
-    public void enviarSMS(String conteudo, int Qtdrepeticoes, String localizacao) {
+    public void enviarSMS(int Qtdrepeticoes, String localizacao) {
+
+        Mensagem msg = Mensagem.findById(Mensagem.class,1);
+        String sms = msg.conteudo;
 
         Contato objContato = new Contato();
         /*
@@ -61,12 +72,16 @@ public class Mensagem extends SugarRecord {
          */
         SmsManager smsManager = SmsManager.getDefault();
 
-        if (conteudo.equalsIgnoreCase(null)){
-            conteudo = "\nPRECISO DE AJUDA";
+        if (sms == null){
+            sms = "Preciso de ajuda Urgente!!!";
+            msg = new Mensagem(sms);
+            msg.save();
         }
-        for (int i = 0; i < Qtdrepeticoes; i++) {
-            smsManager.sendTextMessage(objContato.getTelefone(), null, "ATENCAO!! !"+objContato.getNome()+
-                    "\n"+conteudo+"\nEstou em:"+localizacao, null, null);
+        else {
+            for (int i = 0; i < Qtdrepeticoes; i++) {
+                smsManager.sendTextMessage(objContato.getTelefone(), null, "ATENCAO!! !"+objContato.getNome()+
+                        "\n"+msg.conteudo+"\nEstou em:"+localizacao, null, null);
+            }
         }
     }
 }

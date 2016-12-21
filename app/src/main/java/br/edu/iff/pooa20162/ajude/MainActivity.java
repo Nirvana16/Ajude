@@ -13,9 +13,11 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import br.edu.iff.pooa20162.ajude.model.Mensagem;
-import br.edu.iff.pooa20162.ajude.services.SMSReceiver;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    Mensagem msg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,17 +26,20 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        msg = new Mensagem();
+        msg = Mensagem.findById(Mensagem.class,1);
+
     // BOTÕES ===================================================================================
         // Botao Principal
         ImageButton ibAjuda = (ImageButton) findViewById(R.id.ibAjuda);
         ibAjuda.setOnClickListener(new View.OnClickListener(){
 
             // Criacao do objeto Msg para receber o valor do texto digitado pelo usuário
-            Mensagem msg = new Mensagem();
+
 
             // Variavel de apoio valor recebendo o conteudo do editText da Activity anterior
             //String valor = getIntent().getStringExtra("Msgconteudo");
-            String valor = "preciso de ajuda";
+            //String valor = "preciso de ajuda";
             @Override
             public void onClick(View view) {
                 //Faz com que "conteudo" da classe Mensagem assuma o valor digitado pelo usuario
@@ -44,14 +49,15 @@ public class MainActivity extends AppCompatActivity {
 //                Log.v("Mensagem GET = ",msg.getConteudo());
 
 
-                msg.enviarSMS(valor,4,"Av antonio luiz da silverira - centro - campos dos goytacazes");
+//                msg.enviarSMS(valor,4,"Av antonio luiz da silverira - centro - campos dos goytacazes");
+                msg.enviarSMS(4,"");
                 msg.save();
 
-                msg.setConteudo(valor);
+                //msg.setConteudo(valor);
                 //msg.enviarSMS();
                 Toast.makeText(getApplicationContext(),"Alerta Enviado", Toast.LENGTH_SHORT).show();
 
-                Log.v("Mensagem 2 = ",msg.getConteudo());
+                //Log.v("Mensagem 2 = ",msg.getConteudo());
             }
         });
 
