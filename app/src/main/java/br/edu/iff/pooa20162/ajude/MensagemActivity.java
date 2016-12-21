@@ -56,6 +56,7 @@ public class MensagemActivity extends AppCompatActivity {
                 }
 
                 Toast.makeText(getApplicationContext(),"Mensagem Salva", Toast.LENGTH_SHORT).show();
+                //msg.enviarSMS(1,"vai");
             }
         });
     }

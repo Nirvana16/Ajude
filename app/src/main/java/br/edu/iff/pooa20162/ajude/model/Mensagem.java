@@ -39,30 +39,9 @@ public class Mensagem extends SugarRecord {
         this.conteudo = conteudo;
     }
 
-
-//    public void enviarSMS(String conteudo, int Qtdrepeticoes, String localizacao) {
-//
-//        Contato objContato = new Contato();
-//        /*
-//           SmsManager, API que faz toda a magica acontecer.
-//           lembrar de ler a documentação mais a fundo
-//           https://developer.android.com/reference/android/telephony/SmsManager.html
-//         */
-//        SmsManager smsManager = SmsManager.getDefault();
-//
-//        if (conteudo.equalsIgnoreCase(null)){
-//            conteudo = "\nPRECISO DE AJUDA";
-//        }
-//        for (int i = 0; i < Qtdrepeticoes; i++) {
-//            smsManager.sendTextMessage(objContato.getTelefone(), null, "ATENCAO!! !"+objContato.getNome()+
-//                    "\n"+conteudo+"\nEstou em:"+localizacao, null, null);
-//        }
-//    }
-
     public void enviarSMS(int Qtdrepeticoes, String localizacao) {
 
         Mensagem msg = Mensagem.findById(Mensagem.class,1);
-        String sms = msg.conteudo;
 
         Contato objContato = new Contato();
         /*
@@ -72,16 +51,19 @@ public class Mensagem extends SugarRecord {
          */
         SmsManager smsManager = SmsManager.getDefault();
 
-        if (sms == null){
-            sms = "Preciso de ajuda Urgente!!!";
+        if (msg == null || msg.conteudo.equalsIgnoreCase("")){
+            Log.v("MSG EH","NULO");
+            String sms = "Preciso de ajuda Urgente!!!";
             msg = new Mensagem(sms);
             msg.save();
         }
-        else {
-            for (int i = 0; i < Qtdrepeticoes; i++) {
-                smsManager.sendTextMessage(objContato.getTelefone(), null, "ATENCAO!! !"+objContato.getNome()+
-                        "\n"+msg.conteudo+"\nEstou em:"+localizacao, null, null);
-            }
+        else{
+            String sms = msg.conteudo;
+        }
+        for (int i = 0; i < Qtdrepeticoes; i++) {
+            smsManager.sendTextMessage(objContato.getTelefone(), null, "ATENCAO!! !"+objContato.getNome()+
+                    "\n"+msg.conteudo+"\nEstou em:"+localizacao, null, null);
+
         }
     }
 }

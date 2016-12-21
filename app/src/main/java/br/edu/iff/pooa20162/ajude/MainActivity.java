@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        msg = new Mensagem();
+        //msg = new Mensagem();
         msg = Mensagem.findById(Mensagem.class,1);
 
     // BOTÕES ===================================================================================
@@ -42,22 +42,12 @@ public class MainActivity extends AppCompatActivity {
             //String valor = "preciso de ajuda";
             @Override
             public void onClick(View view) {
-                //Faz com que "conteudo" da classe Mensagem assuma o valor digitado pelo usuario
-                //Isso será desnecessário assim que salvar os dados no BD
 
-               //Log.v("Mensagem Valor = ",valor);
-//                Log.v("Mensagem GET = ",msg.getConteudo());
-
-
-//                msg.enviarSMS(valor,4,"Av antonio luiz da silverira - centro - campos dos goytacazes");
-                msg.enviarSMS(4,"");
-                msg.save();
-
-                //msg.setConteudo(valor);
-                //msg.enviarSMS();
+                if (msg == null){
+                    msg = new Mensagem("Preciso de Ajuda");
+                }
+                msg.enviarSMS(4,".");
                 Toast.makeText(getApplicationContext(),"Alerta Enviado", Toast.LENGTH_SHORT).show();
-
-                //Log.v("Mensagem 2 = ",msg.getConteudo());
             }
         });
 
@@ -166,21 +156,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
-
-
-//    // Menu original, comentado por ora.... Excluir no futuro
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
 }
