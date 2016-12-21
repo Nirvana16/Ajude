@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 msg.enviarSMS(valor,4,"Av antonio luiz da silverira - centro - campos dos goytacazes");
+                msg.save();
 
                 msg.setConteudo(valor);
                 //msg.enviarSMS();
