@@ -64,9 +64,6 @@ public class Mensagem extends SugarRecord {
         if (conteudo.equalsIgnoreCase(null)){
             conteudo = "\nPRECISO DE AJUDA";
         }
-        // O for serve para enviar multiplas mensagens, haverá um parametro na tela de configurações
-        // Onde o usuário poderá definir quantas mensagens ele quer enviar. Por ora coloquei 4.
-
         for (int i = 0; i < Qtdrepeticoes; i++) {
             smsManager.sendTextMessage(objContato.getTelefone(), null, "ATENCAO!! !"+objContato.getNome()+
                     "\n"+conteudo+"\nEstou em:"+localizacao, null, null);
