@@ -33,14 +33,14 @@ public class MainActivity extends AppCompatActivity {
             Mensagem msg = new Mensagem();
 
             // Variavel de apoio valor recebendo o conteudo do editText da Activity anterior
-            String valor = getIntent().getStringExtra("Msgconteudo");
-
+            //String valor = getIntent().getStringExtra("Msgconteudo");
+            String valor = "preciso de ajuda";
             @Override
             public void onClick(View view) {
                 //Faz com que "conteudo" da classe Mensagem assuma o valor digitado pelo usuario
                 //Isso será desnecessário assim que salvar os dados no BD
 
-                Log.v("Mensagem Valor = ",valor);
+               //Log.v("Mensagem Valor = ",valor);
 //                Log.v("Mensagem GET = ",msg.getConteudo());
 
 
