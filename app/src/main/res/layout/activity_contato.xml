@@ -40,30 +40,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="Fulano de Tal"
+                android:hint="Nome"
                 android:ems="10"
-                android:id="@+id/etNome1" />
+                android:id="@+id/etNomeC" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:gravity="center"
                 android:layout_height="wrap_content"
-                android:text="@string/telefone"
                 android:id="@+id/Telefone"
                 android:textStyle="bold"
                 android:focusableInTouchMode="true"
                 android:focusable="true"
                 android:textSize="20dp"
-                android:textColor="#081800"/>
+                android:textColor="#081800"
+                android:text="@string/telefone"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone"
                 android:ems="10"
-                android:id="@+id/etTelefone1"
-                android:text="22997254145" />
+                android:id="@+id/etTelefoneC"
+                android:hint="22987654321"/>
+
         </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="265dp" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -74,7 +79,7 @@
                 android:text="Gravar"
                 android:layout_width="156dp"
                 android:layout_height="59dp"
-                android:id="@+id/gravar"
+                android:id="@+id/btSalvarC"
                 android:background="@drawable/botao"
                 android:textSize="20dp"
                 android:textColor="#ffffff"
@@ -89,7 +94,7 @@
                 android:text="Limpar"
                 android:layout_width="156dp"
                 android:layout_height="59dp"
-                android:id="@+id/limpar"
+                android:id="@+id/btLimparC"
                 android:background="@drawable/botao"
                 android:textSize="20dp"
                 android:textColor="#ffffff"

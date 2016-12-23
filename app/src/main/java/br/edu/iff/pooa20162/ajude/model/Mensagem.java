@@ -19,10 +19,16 @@ public class Mensagem extends SugarRecord {
     // Atributo para o Banco de dados
     private Long id;
 
-    // Provisório até implementar a classe Local.
-    //private String conteudo = "\nPRECISO DE AJUDA \n Estou em: LOCALIZACAO";
+    private Contato contato;
     private String conteudo;
 
+    public Contato getContato() {
+        return contato;
+    }
+
+    public void setContato(Contato contato) {
+        this.contato = contato;
+    }
 
     public String getConteudo() {
         return conteudo;
@@ -42,8 +48,9 @@ public class Mensagem extends SugarRecord {
     public void enviarSMS(int Qtdrepeticoes, String localizacao) {
 
         Mensagem msg = Mensagem.findById(Mensagem.class,1);
+        contato = contato.findById(Contato.class,1);
+        String CodigoPais = "+55";
 
-        Contato objContato = new Contato();
         /*
            SmsManager, API que faz toda a magica acontecer.
            lembrar de ler a documentação mais a fundo
@@ -57,11 +64,8 @@ public class Mensagem extends SugarRecord {
             msg = new Mensagem(sms);
             msg.save();
         }
-        else{
-            String sms = msg.conteudo;
-        }
         for (int i = 0; i < Qtdrepeticoes; i++) {
-            smsManager.sendTextMessage(objContato.getTelefone(), null, "ATENCAO!! !"+objContato.getNome()+
+            smsManager.sendTextMessage(CodigoPais+contato.getTelefone().toString(), null, "ATENCAO!! ! "+contato.getNome().toString()+
                     "\n"+msg.conteudo+"\nEstou em:"+localizacao, null, null);
 
         }
