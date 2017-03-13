@@ -62,7 +62,6 @@
             android:textSize="20dp"
             android:textColor="#ffffff"
             android:textStyle="bold"/>
-
     </LinearLayout>
 
 </RelativeLayout>

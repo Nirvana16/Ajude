@@ -1,13 +1,33 @@
 package br.edu.iff.pooa20162.ajude.model;
 
+import com.orm.SugarRecord;
+
+import java.util.List;
+
 /**
- * Created by Nirvana161 on 19/12/16.
+ * Created by Nirvana16 on 19/12/16.
  */
 
-public class Contato {
+public class Contato extends SugarRecord{
+
+    private Long id;
 
     private String nome;
     private String telefone;
+
+    private Mensagem mensagem;
+
+    public Mensagem getMensagem() {
+        return mensagem;
+    }
+
+    public void setMensagem(Mensagem mensagem) {
+        this.mensagem = mensagem;
+    }
+
+//    public List<Mensagem> getMensagem(){
+//        return Mensagem.find(Mensagem.class, "contato = ?", new String{contato.getId()});
+//    }
 
     public String getTelefone() {
         return telefone;
@@ -26,8 +46,12 @@ public class Contato {
     }
 
     public Contato(){
-        nome = "Fulando de tal";
-        telefone = "+5522997814310";
+    }
+
+    public Contato(String nome, String telefone){
+        this.nome = nome;
+        this.telefone = telefone;
+        //mensagem = new Mensagem();
     }
 
 

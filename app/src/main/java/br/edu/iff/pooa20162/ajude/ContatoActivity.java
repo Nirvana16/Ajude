@@ -3,76 +3,102 @@ package br.edu.iff.pooa20162.ajude;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import br.edu.iff.pooa20162.ajude.model.Contato;
 
 public class ContatoActivity extends AppCompatActivity {
 
- // Variaveis locais ====================================================================
-    private String nome, telefone;
+ // Atributo de referencia ====================================================================
 
- // Getters and Setters ================================================================
-    public String getNome() {
-        return nome;
-    }
+    private Contato contato;
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-// Metodos construtores =================================================================
-    /* Fiz atribuição estatica por ora. futuramente isso sera coletado do usuario e
-        em seguida do banco de dados.
-    */
-    public ContatoActivity(){
-        nome = "Fulando de tal";
-        telefone = "+5522997814310";
-    }
+// Atributos da View ==========================================
+    Button bSalvar,bLimpar;
+    EditText etTelefone, etNome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contato);
+
+        bSalvar = (Button) findViewById(R.id.btSalvarC);
+        bLimpar = (Button) findViewById(R.id.btLimparC);
+
+        etNome = (EditText) findViewById(R.id.etNomeC);
+        etTelefone = (EditText) findViewById(R.id.etTelefoneC);
+
+        MascaraEditTextListener maskTel = new MascaraEditTextListener("(##)#####-####", etTelefone);
+        etTelefone.addTextChangedListener(maskTel);
+
+        contato = contato.findById(Contato.class,1);
+        if (contato != null){
+            etTelefone.setText(contato.getTelefone());
+            etNome.setText(contato.getNome());
+        }
+
+        bSalvar.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                String nome = etNome.getText().toString();
+                String telefone = etTelefone.getText().toString();
+
+
+                if (contato == null) {
+                    contato = new Contato(nome, telefone);
+                }
+                else{
+                    contato.setNome(nome);
+                    contato.setTelefone(telefone);
+                }
+                contato.save();
+                Toast.makeText(getApplicationContext(),"Contato Salvo", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Para debug:
+        bLimpar.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                etTelefone.setText(contato.getTelefone());
+                etNome.setText(contato.getNome());
+            }
+        });
     }
 
     @Override
     protected void onStart()
     {
         super.onStart();
-        Log.v("Hora do Show","OnStart");
+        Log.v("Contato","OnStart");
     }
 
     @Override
     protected void onResume()
     {
         super.onResume();
-        Log.v("Boora","onResume");
+        Log.v("Contato","onResume");
     }
 
     @Override
     protected void onPause()
     {
         super.onPause();
-        Log.v("Segura!","onPause");
+        Log.v("Contato!","onPause");
     }
 
     @Override
     protected void onStop()
     {
         super.onStop();
-        Log.v("Birll","onStop");
+        Log.v("Contato","onStop");
     }
     @Override
     protected void onDestroy()
     {
         super.onDestroy();
-        Log.v("Ta saindo da jaula","onDestroy");
+        Log.v("Contato","onDestroy");
     }
 }
 

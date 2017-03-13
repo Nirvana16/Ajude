@@ -41,7 +41,8 @@ public class SMSReceiver extends BroadcastReceiver {
                 //Futuramente vou trocar essa palavra chave
                 //Farei uma condicional para verificar se o numero de quem enviou é o numero do Paciente
                 //Havendo a combinação Numero Paciente + Codigo Chave o alarme será ativado no aparelho alvo.
-                if (messagem.equalsIgnoreCase("123")) {
+                if (messagem.contains("ATENCAO!! ! ")){
+//                if (messagem.equalsIgnoreCase("123")) {
                     mp = MediaPlayer.create(context, R.raw.alarme);
                     mp.start();
 
