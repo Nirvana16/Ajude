@@ -31,7 +31,7 @@ public class ContatoActivity extends AppCompatActivity {
         etNome = (EditText) findViewById(R.id.etNomeC);
         etTelefone = (EditText) findViewById(R.id.etTelefoneC);
 
-        MaskEditTextChangedListener maskTel = new MaskEditTextChangedListener("(##)#####-####", etTelefone);
+        MascaraEditTextListener maskTel = new MascaraEditTextListener("(##)#####-####", etTelefone);
         etTelefone.addTextChangedListener(maskTel);
 
         contato = contato.findById(Contato.class,1);

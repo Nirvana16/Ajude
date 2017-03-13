@@ -7,6 +7,8 @@ import android.widget.Toast;
 
 import com.orm.SugarRecord;
 
+import java.util.List;
+
 import br.edu.iff.pooa20162.ajude.MainActivity;
 import br.edu.iff.pooa20162.ajude.MensagemActivity;
 
@@ -19,16 +21,21 @@ public class Mensagem extends SugarRecord {
     // Atributo para o Banco de dados
     private Long id;
 
-    private Contato contato;
     private String conteudo;
 
-    public Contato getContato() {
-        return contato;
-    }
+//    public List<Contato> getContatos(){
+//        return Contato.find(Contato.class, "mensagem = ?", String.valueOf(this.getId()));
+//    }
 
-    public void setContato(Contato contato) {
-        this.contato = contato;
-    }
+//    private Contato contato;
+//
+//    public Contato getContato() {
+//        return contato;
+//    }
+//
+//    public void setContato(Contato contato) {
+//        this.contato = contato;
+//    }
 
     public String getConteudo() {
         return conteudo;
@@ -45,11 +52,16 @@ public class Mensagem extends SugarRecord {
         this.conteudo = conteudo;
     }
 
+
+
+
     public void enviarSMS(int Qtdrepeticoes, String localizacao) {
 
-        Mensagem msg = Mensagem.findById(Mensagem.class,1);
-        contato = contato.findById(Contato.class,1);
         String CodigoPais = "+55";
+        Mensagem msg = Mensagem.findById(Mensagem.class,1);
+        Contato contato = new Contato();
+        contato = contato.findById(Contato.class,1);
+
 
         /*
            SmsManager, API que faz toda a magica acontecer.
