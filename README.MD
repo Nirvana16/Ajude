@@ -1,16 +1,16 @@
 **ATENÇÃO:
 
 1)BUGS CONHECIDOS: 
-  1.1)A versão disponivel no branch MASTER NÃO solicita a permissão para o usuário em tempo de execução. conforme é a regra a partir da API 23
+  1.1)Ao iniciar o Android o serviço do Ajude é incializado, porem apresenta uma mensagem de erro informando que o serviço parou, ainda não corrigi o problema, 
+      mas, aparentemente, não afeta nenhuma outra funcionalidade do aplicativo até o momento
+      
+  1.2)No primeiro uso será solicitada a permissão para recebimento e envio de SMS, caso o usuario demore muito para escolher uma opção o programa irá iniciar sem
+      a liberação o que irá impedir o envio e recebimento de mensagens. (Basta fechar e abrir o app e aprovar a permissão para contornar esse problema)
 
     OBSERVAÇÃO:
             É possivel conceder as permissões necessárias indo nas informações do Aplicativo
             (Configurações / Aplicações / AJUDE) E informar as permissões na proxima tela.
 
-    CORREÇÃO:
-            No ramo NEVERMIND encontra-se uma nova versão na qual foi implementada uma SplashScreen
-            que faz a solicitação em tempo de execução. Ainda não esta perfeita e será melhor implementada,
-            contudo já starta um ponto inicial da futura correção definitiva.
 2)O que foi realizado até o momento no ramo Master:
 
     - Criado Activities.
@@ -24,17 +24,18 @@
     - Iniciado a realização da documentação do App
     - Realizado o Diagrama de Classes
     - Realizado xml dos botões com efeito de animação ao clique.
+    - Implementado a persistencia com SugarORM na Classe MENSAGEM
+    
 2.1) O que falta ser realizado:
 
     - Polir as Activities para melhor efeito visual
-    - Implementar O CRUD com SQLITE e, talvez, aplicar um ORM.
+    - Implementar O CRUD com Sugar nas outras classes
     - Finalizar a documentação.
     - Realizar o restante da parte de programação do projeto.
-    - Organizar as classes do projeto e seus relacionamentos
-    - Implementar o serviço de background responsavel por receber o alerta
     - Implemenntar o serviço de geolocalização
+    
+    
 IFF - Campus Centro Bacharelado de Sistemas de Informações Projeto Orientação a Objetos Aplicada
-
 SISTEMA DE APOIO EMERGENCIAL UTILIZANDO A PLATAFORMA ANDROID. .
 
 .INTRODUÇÃO Observando o crescimento da utilização de aplicativos móveis pela população idosa, assim como a elevação dos indicies de violência essa aplicação surge com o objetivo de auxiliar seus utilizadores, principalmente os da terceira idade, a manterem seu sentimento de segurança e independência.
