@@ -19,7 +19,7 @@ import br.edu.iff.pooa20162.ajude.R;
 import br.edu.iff.pooa20162.ajude.adapter.MedicamentoAdapter;
 import br.edu.iff.pooa20162.ajude.model.Medicamento;
 
-import static br.edu.iff.pooa20162.ajude.R.id.bMedicamentoNovo;
+//import static br.edu.iff.pooa20162.ajude.R.id.bMedicamentoNovo;
 
 
 public class MedicamentoActivity extends AppCompatActivity {
@@ -45,22 +45,22 @@ public class MedicamentoActivity extends AppCompatActivity {
 //            }
 //        });
 
-        Button bNovo = (Button) findViewById(bMedicamentoNovo);
-        bNovo.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Intent it = new Intent(MedicamentoActivity.this, MedicamentoCadastroActivity.class);
-                it.putExtra("id",0);
-                it.putExtra("nome","");
-                it.putExtra("descricao","");
-                it.putExtra("horaDeUso","");
-                it.putExtra("dataInicio","");
-                it.putExtra("dataTermino","");
-                it.putExtra("dosagem",0);
-                startActivity(it);
-            }
-        });
+//        Button bNovo = (Button) findViewById(bMedicamentoNovo);
+//        bNovo.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View view) {
+//                Intent it = new Intent(MedicamentoActivity.this, MedicamentoCadastroActivity.class);
+//                it.putExtra("id",0);
+//                it.putExtra("nome","");
+//                it.putExtra("descricao","");
+//                it.putExtra("horaDeUso","");
+//                it.putExtra("dataInicio","");
+//                it.putExtra("dataTermino","");
+//                it.putExtra("dosagem",0);
+//                startActivity(it);
+//            }
+//        });
     }
 
     @Override
@@ -146,8 +146,18 @@ public class MedicamentoActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_add:
-                Intent intent = new Intent(this, MedicamentoCadastroActivity.class);
-                this.startActivity(intent);
+//                Intent intent = new Intent(this, MedicamentoCadastroActivity.class);
+//                this.startActivity(intent);
+//
+                Intent it = new Intent(MedicamentoActivity.this, MedicamentoCadastroActivity.class);
+                it.putExtra("id",0);
+                it.putExtra("nome","");
+                it.putExtra("descricao","");
+                it.putExtra("horaDeUso","");
+                it.putExtra("dataInicio","");
+                it.putExtra("dataTermino","");
+                it.putExtra("dosagem",0);
+                startActivity(it);
                 break;
 //            case R.id.action_paciente:
 //                Intent intent2 = new Intent(this,PacienteActivity.class);

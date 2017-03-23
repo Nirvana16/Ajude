@@ -8,7 +8,13 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/tvLinhaMedicamento"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Title"/>/>
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Title"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp">
+
+    </FrameLayout>/>
 
 
 

@@ -1,4 +1,4 @@
-package br.edu.iff.pooa20162.ajude;
+package br.edu.iff.pooa20162.ajude.Mask;
 
 /**
  * Created by Nirvana16 on 22/12/16.

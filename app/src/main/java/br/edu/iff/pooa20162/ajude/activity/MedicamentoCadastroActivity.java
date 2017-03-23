@@ -1,6 +1,8 @@
 package br.edu.iff.pooa20162.ajude.activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,7 +17,7 @@ import br.edu.iff.pooa20162.ajude.model.Medicamento;
 public class MedicamentoCadastroActivity extends AppCompatActivity {
 
     EditText nome, descricao, dosagem, horaDeUso, dataInicio, dataTermino;
-    Button btSalvar;
+    Button btSalvar, btApagar;
     int id;
 
     @Override
@@ -55,6 +57,15 @@ public class MedicamentoCadastroActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 salvar();
+            }
+        });
+
+        btApagar = (Button) findViewById(R.id.bApagar);
+        btApagar.setOnClickListener( new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                deletar();
             }
         });
 
@@ -108,5 +119,28 @@ public class MedicamentoCadastroActivity extends AppCompatActivity {
         medicamento.save();
         Toast.makeText(this,"Medicamento Cadastrado",Toast.LENGTH_LONG).show();
         this.finish();
+    }
+
+
+    public void deletar(){
+        new AlertDialog.Builder(this)
+                .setTitle("ATENCAO")
+                .setMessage("DESEJA REALMENTE EXCLUIR ESSE MEDICAMENTO?")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        nome = (EditText) findViewById(R.id.etMedicamentoNome);
+                        descricao = (EditText) findViewById(R.id.etMedicamentoDescricao);
+                        dosagem = (EditText) findViewById(R.id.etMedicamentoDose);
+                        horaDeUso = (EditText) findViewById(R.id.etMedicamentoHora);
+                        dataInicio = (EditText) findViewById(R.id.etMedicamentoDataInicio);
+                        dataTermino = (EditText) findViewById(R.id.etMedicamentoDataTermino);
+
+                        Medicamento medicamento = Medicamento.findById(Medicamento.class, id);
+                        medicamento.delete();
+                        finish();
+                    }})
+                .setNegativeButton(android.R.string.no, null).show();
+
     }
 }

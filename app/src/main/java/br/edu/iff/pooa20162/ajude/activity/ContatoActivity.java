@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import br.edu.iff.pooa20162.ajude.MascaraEditTextListener;
+import br.edu.iff.pooa20162.ajude.Mask.MascaraEditTextListener;
 import br.edu.iff.pooa20162.ajude.R;
 import br.edu.iff.pooa20162.ajude.model.Contato;
 
