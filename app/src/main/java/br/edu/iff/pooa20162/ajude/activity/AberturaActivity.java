@@ -1,4 +1,4 @@
-package br.edu.iff.pooa20162.ajude;
+package br.edu.iff.pooa20162.ajude.activity;
 
 import android.Manifest;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import br.edu.iff.pooa20162.ajude.R;
 
 import static android.Manifest.permission.RECEIVE_SMS;
 

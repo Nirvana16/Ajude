@@ -1,4 +1,4 @@
-package br.edu.iff.pooa20162.ajude;
+package br.edu.iff.pooa20162.ajude.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import br.edu.iff.pooa20162.ajude.R;
 
 public class ExameActivity extends AppCompatActivity {
 

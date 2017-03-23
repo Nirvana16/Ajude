@@ -1,6 +1,7 @@
 **ATENÇÃO:
 
 1)BUGS CONHECIDOS: 
+
   1.1)Ao iniciar o Android o serviço do Ajude é incializado, porem apresenta uma mensagem de erro informando que o serviço parou, ainda não corrigi o problema, 
       mas, aparentemente, não afeta nenhuma outra funcionalidade do aplicativo até o momento
       
@@ -25,6 +26,7 @@
     - Realizado o Diagrama de Classes
     - Realizado xml dos botões com efeito de animação ao clique.
     - Implementado a persistencia com SugarORM na Classe MENSAGEM
+    - Implementado CRUD na classe Medicamento 
     
 2.1) O que falta ser realizado:
 

@@ -1,49 +1,51 @@
-package br.edu.iff.pooa20162.ajude;
+package br.edu.iff.pooa20162.ajude.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-public class MedicamentoCadastroActivity extends AppCompatActivity {
+import br.edu.iff.pooa20162.ajude.R;
+
+public class PacienteActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medicamento_cadastro);
-
-
+        setContentView(R.layout.activity_paciente);
     }
+
     @Override
     protected void onStart()
     {
         super.onStart();
-        Log.v("Hora do Show","OnStart");
+        Log.v("Paciente","OnStart");
     }
 
     @Override
     protected void onResume()
     {
         super.onResume();
-        Log.v("Boora","onResume");
+        Log.v("Paciente","onResume");
     }
 
     @Override
     protected void onPause()
     {
         super.onPause();
-        Log.v("Segura!","onPause");
+        Log.v("Paciente!","onPause");
     }
 
     @Override
     protected void onStop()
     {
         super.onStop();
-        Log.v("Birll","onStop");
+        Log.v("Paciente","onStop");
     }
     @Override
     protected void onDestroy()
     {
         super.onDestroy();
-        Log.v("Ta saindo da jaula","onDestroy");
+        Log.v("Paciente","onDestroy");
     }
 }

@@ -7,12 +7,8 @@ import android.media.MediaPlayer;
 import android.provider.Telephony;
 import android.telephony.SmsMessage;
 import android.util.Log;
-import android.widget.Toast;
 
-import br.edu.iff.pooa20162.ajude.MainActivity;
-import br.edu.iff.pooa20162.ajude.MensagemActivity;
-import br.edu.iff.pooa20162.ajude.PacienteActivity;
-import br.edu.iff.pooa20162.ajude.PacienteAjudaActivity;
+import br.edu.iff.pooa20162.ajude.activity.PacienteAjudaActivity;
 import br.edu.iff.pooa20162.ajude.R;
 
 

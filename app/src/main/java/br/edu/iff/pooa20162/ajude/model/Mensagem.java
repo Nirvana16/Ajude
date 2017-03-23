@@ -1,16 +1,9 @@
 package br.edu.iff.pooa20162.ajude.model;
 
-import android.content.Intent;
 import android.telephony.SmsManager;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.orm.SugarRecord;
-
-import java.util.List;
-
-import br.edu.iff.pooa20162.ajude.MainActivity;
-import br.edu.iff.pooa20162.ajude.MensagemActivity;
 
 /**
  * Created by Nirvana16 on 19/12/16.

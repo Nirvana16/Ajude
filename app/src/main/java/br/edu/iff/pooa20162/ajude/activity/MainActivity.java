@@ -1,6 +1,5 @@
-package br.edu.iff.pooa20162.ajude;
+package br.edu.iff.pooa20162.ajude.activity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +11,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import br.edu.iff.pooa20162.ajude.R;
 import br.edu.iff.pooa20162.ajude.model.Mensagem;
 
 

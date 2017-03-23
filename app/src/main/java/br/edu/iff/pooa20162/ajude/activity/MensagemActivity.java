@@ -1,4 +1,4 @@
-package br.edu.iff.pooa20162.ajude;
+package br.edu.iff.pooa20162.ajude.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import br.edu.iff.pooa20162.ajude.R;
 import br.edu.iff.pooa20162.ajude.model.Contato;
 import br.edu.iff.pooa20162.ajude.model.Mensagem;
 
