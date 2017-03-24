@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import br.edu.iff.pooa20162.ajude.R;
+import br.edu.iff.pooa20162.ajude.model.Contato;
 import br.edu.iff.pooa20162.ajude.model.Mensagem;
 
 

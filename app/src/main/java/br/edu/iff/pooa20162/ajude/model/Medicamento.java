@@ -73,7 +73,4 @@ public class Medicamento extends SugarRecord{
         this.dosagem = dosagem;
     }
 
-
-
-
 }

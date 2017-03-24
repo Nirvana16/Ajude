@@ -1,4 +1,5 @@
 <resources>
+    <string name="mensagem_padrao">Me Ajude porfavor</string>
     <string name="app_name">Ajude</string>
     <string name="opcoes">Opções</string>
     <string name="paciente">Paciente</string>
@@ -10,7 +11,7 @@
     <string name="telefone">Telefone do Contato</string>
     <string name="exames">Proximos Exames e Consultas</string>
     <string name="medicamentos">Medicamentos</string>
-
+    <string name="novoExame">Cadastrar Exame</string>
     <string name="novoMedicamento">Cadastrar Medicamento</string>
     <string name="medicamentoNome">Nome do Medicamento</string>
     <string name="medicamentoDescricao">Descrição do Medicamento</string>
@@ -25,4 +26,6 @@
     <string name="exameHora">Horario do Exame</string>
 
     <string name="usuario">Dados do Usuario</string>
+
+
 </resources>

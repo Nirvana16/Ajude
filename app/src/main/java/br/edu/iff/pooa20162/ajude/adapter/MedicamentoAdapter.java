@@ -21,7 +21,6 @@ public class MedicamentoAdapter extends ArrayAdapter<Medicamento> {
     private Context context = null;
     private ArrayList<Medicamento> medicamentos = null;
 
-
     public MedicamentoAdapter(Context context, ArrayList<Medicamento> medicamentos) {
         super(context, R.layout.linha_medicamento,medicamentos);
         this.context = context;

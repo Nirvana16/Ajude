@@ -23,46 +23,6 @@
         android:textSize="25dp"
         android:focusableInTouchMode="true"
         android:focusable="true" />
-    <!--
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tMedicamentos"
-        android:weightSum="1"
-        android:id="@+id/linearLayout">
-
-        <Button
-            android:text="Novo +"
-            android:layout_width="110dp"
-            android:layout_height="48dp"
-            android:id="@+id/bMedicamentoNovo"
-            android:background="@drawable/botao"
-            android:textSize="20dp"
-            android:textColor="#ffffff"
-            android:textStyle="bold" />
-
-        <Button
-            android:text="Detalhar"
-            android:layout_width="110dp"
-            android:layout_height="48dp"
-            android:id="@+id/bMedicamentoDetalhar"
-            android:background="@drawable/botao"
-            android:textSize="17dp"
-            android:textColor="#ffffff"
-            android:textStyle="bold" />
-
-        <Button
-            android:text="Excluir"
-            android:layout_width="110dp"
-            android:layout_height="48dp"
-            android:id="@+id/bMedicamentoExcluir"
-            android:background="@drawable/botao"
-            android:textSize="20dp"
-            android:textColor="#ffffff"
-            android:textStyle="bold" />
-    </LinearLayout>
-    -->
 
     <ListView
         android:layout_width="match_parent"

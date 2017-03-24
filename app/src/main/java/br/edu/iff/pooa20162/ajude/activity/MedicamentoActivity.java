@@ -116,22 +116,6 @@ public class MedicamentoActivity extends AppCompatActivity {
         Log.v("MedicamentoAct", "onDestroy");
     }
 
-    // Futuramente vou implementar para que ocorra o preenchimento dinamico em tempo de execução.
-//    private ArrayList<String> preencherDados() {
-//        ArrayList<String> dados = new ArrayList<String>();
-//        dados.add("Aldactone");
-//        dados.add("Benazepril");
-//        dados.add("Furosemida");
-//        dados.add("Digoxina");
-//        dados.add("Bisoprolol");
-//        dados.add("Puran T4");
-//        dados.add("Seretide");
-//        dados.add("Hidroclorotiazida");
-//        dados.add("Acebrofilina");
-//        dados.add("Loratadina");
-//        return dados;
-//    }
-
     // Métodos da Action Bar ========================================================================
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

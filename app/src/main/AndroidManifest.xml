@@ -51,7 +51,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             </intent-filter>
         </activity>
         <activity android:name=".activity.MensagemActivity" />
@@ -62,12 +62,17 @@
         <activity android:name=".activity.MedicamentoCadastroActivity" />
         <activity android:name=".activity.OpcoesActivity" />
         <activity android:name=".activity.PacienteAjudaActivity" />
-        <activity android:name=".activity.AberturaActivity" android:label="@string/app_name">
+        <activity android:name=".activity.ExameCadastroActivity" />
+        <activity
+            android:name=".activity.AberturaActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
