@@ -34,6 +34,7 @@
     - Realizar o restante da parte menores na programação do projeto, algumas ajuste e correção de bugs.
     - Implementar o serviço de geolocalização
     - Revisar a Documentação.
+    - Trocar os tipos das variaveis para ficarem corretas, use String em algumas onde poderiam ser Int (por exemplo)
     
 3) Outras Informações:
     
@@ -44,7 +45,13 @@ SISTEMA DE APOIO EMERGENCIAL UTILIZANDO A PLATAFORMA ANDROID.
 
 .OBJETIVOS Esta aplicação visa fornecer suporte rápido a qualquer pessoa que, porventura, encontra-se em uma situação de risco. Por meio de um simples apertar de um botão em um smartphone. Bem como prover maior autonomia e comodidade a pessoas que fazem uso de medicação periódica.
 
-.OBJETIVOS ESPECÍFICOS O Aplicativo permitirá: • Avisar imediatamente parentes e amigos do utilizador que ele necessita de uma ajuda. • Enviar informações como geolocalização do utilizador. • Acionar um alarme sonoro no disposto. • Enviar mensagens recorrentes automáticas com a localização do usuário. • Cadastrar medicação a qual o usuário esteja utilizando. • Cadastrar datas de próximos exames e consultas a serem realizadas pelo paciente
+.OBJETIVOS ESPECÍFICOS O Aplicativo permitirá: 
+        • Avisar imediatamente parentes e amigos do utilizador que ele necessita de uma ajuda. 
+        • Enviar informações como geolocalização do utilizador. 
+        • Acionar um alarme sonoro no disposto. 
+        • Enviar mensagens recorrentes automáticas com a localização do usuário. 
+        • Cadastrar medicação a qual o usuário esteja utilizando. 
+        • Cadastrar datas de próximos exames e consultas a serem realizadas pelo paciente
 
 Documentação completa: Vide diretório de documentação. 
 
