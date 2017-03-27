@@ -69,7 +69,6 @@ public class PacienteActivity extends AppCompatActivity {
         super.onPause();
         Log.v("Paciente!","onPause");
     }
-
     @Override
     protected void onStop()
     {

@@ -23,9 +23,5 @@ public class PacienteAjudaActivity extends AppCompatActivity {
         if (paciente != null){
             ajudeNome.setText(paciente.getNome());
         }
-        else{
-
-        }
-
     }
 }
