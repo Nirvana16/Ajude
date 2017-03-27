@@ -13,7 +13,7 @@ public class service extends Service{
         return null;
     }
     public void onDestroy() {
-        Toast.makeText(this, "O servico Ajude parou", Toast.LENGTH_LONG).show();
+       // Toast.makeText(this, "O servico Ajude parou", Toast.LENGTH_LONG).show();
         Log.d(TAG, "onDestroy");
     }
 
@@ -23,7 +23,7 @@ public class service extends Service{
         Intent intents = new Intent(getBaseContext(),SMSReceiver.class);
         intents.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intents);
-        Toast.makeText(this, "O Servico Ajude foi iniciado", Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "O Servico Ajude foi iniciado", Toast.LENGTH_LONG).show();
         Log.d(TAG, "onStart");
     }
 }

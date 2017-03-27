@@ -1,13 +1,16 @@
 package br.edu.iff.pooa20162.ajude.model;
 
+import com.orm.SugarRecord;
+
 import java.util.Date;
 
 /**
  * Created by Nirvana161 on 19/12/16.
  */
 
-public class Paciente {
+public class Paciente extends SugarRecord {
 
+    private Long id;
     private String nome;
     private String dataNascimento;
     private String telefone;
@@ -36,11 +39,14 @@ public class Paciente {
         this.telefone = telefone;
     }
 
-    public Paciente(String nome, String dataNascimento, String Telefone){
-        nome = this.nome;
-        dataNascimento = this.dataNascimento;
-        Telefone = this.telefone;
+    public Paciente(String nome, String dataNascimento, String telefone){
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.telefone = telefone;
     }
+
+    public Paciente(){}
+
 
 
 

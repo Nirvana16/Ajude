@@ -15,32 +15,15 @@ public class Mensagem extends SugarRecord {
     private Long id;
 
     private String conteudo;
-
-//    public List<Contato> getContatos(){
-//        return Contato.find(Contato.class, "mensagem = ?", String.valueOf(this.getId()));
-//    }
-
-//    private Contato contato;
-//
-//    public Contato getContato() {
-//        return contato;
-//    }
-//
-//    public void setContato(Contato contato) {
-//        this.contato = contato;
-//    }
-
     public String getConteudo() {
         return conteudo;
     }
-
     public void setConteudo(String conteudo) {
         this.conteudo = conteudo;
     }
 
 
     public Mensagem(){}
-
     public Mensagem(String conteudo){
         this.conteudo = conteudo;
     }

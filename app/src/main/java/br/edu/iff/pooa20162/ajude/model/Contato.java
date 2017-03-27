@@ -25,10 +25,6 @@ public class Contato extends SugarRecord{
         this.mensagem = mensagem;
     }
 
-//    public List<Mensagem> getMensagem(){
-//        return Mensagem.find(Mensagem.class, "contato = ?", new String{contato.getId()});
-//    }
-
     public String getTelefone() {
         return telefone;
     }
@@ -51,7 +47,6 @@ public class Contato extends SugarRecord{
     public Contato(String nome, String telefone){
         this.nome = nome;
         this.telefone = telefone;
-        //mensagem = new Mensagem();
     }
 
 
